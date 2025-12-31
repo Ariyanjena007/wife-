@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ariyan ❤️ Lugna – Happy New Year</title>
+
+<style>
+body{
+ margin:0;
+ font-family:'Segoe UI',sans-serif;
+ background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+ color:white;
+ text-align:center;
+ overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+ background:rgba(0,0,0,0.5);
+ padding:12px;
+ position:sticky;
+ top:0;
+ z-index:10;
+}
+nav a{
+ color:white;
+ margin:0 12px;
+ font-weight:bold;
+ cursor:pointer;
+ text-decoration:none;
+}
+nav a:hover{color:#ffcc00}
+
+/* SECTION HANDLING */
+section{display:none}
+section.active{display:block}
+
+.container{
+ padding:35px 15px;
+ max-width:900px;
+ margin:auto;
+}
+
+/* NEON HEART BORDER */
+.neon{
+ border:3px solid #ff0080;
+ border-radius:25px;
+ box-shadow:
+ 0 0 10px #ff0080,
+ 0 0 20px #ff0080,
+ 0 0 40px #ff0080;
+ padding:15px;
+ animation:glow 2s infinite;
+}
+@keyframes glow{
+ 0%{box-shadow:0 0 10px #ff0080;}
+ 50%{box-shadow:0 0 30px #ff0080;}
+ 100%{box-shadow:0 0 10px #ff0080;}
+}
+
+/* TYPING */
+.typing{
+ border-right:2px solid white;
+ width:0;
+ white-space:nowrap;
+ overflow:hidden;
+ animation:typing 5s steps(30) infinite alternate;
+ font-size:20px;
+ color:#ffcc00;
+}
+@keyframes typing{
+ from{width:0}
+ to{width:240px}
+}
+
+/* SLIDESHOW */
+.slideshow img{
+ width:90%;
+ max-width:420px;
+ border-radius:25px;
+ box-shadow:0 0 25px rgba(255,255,255,0.25);
+}
+
+/* GALLERY */
+.gallery{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:12px;
+}
+.gallery img{
+ width:100%;
+ border-radius:20px;
+ cursor:pointer;
+}
+
+/* LIGHTBOX */
+#lightbox{
+ position:fixed;
+ inset:0;
+ background:rgba(0,0,0,0.9);
+ display:none;
+ justify-content:center;
+ align-items:center;
+}
+#lightbox img{
+ width:85%;
+ max-width:450px;
+ border-radius:25px;
+}
+
+/* LOVE LETTER */
+.letter{
+ max-height:260px;
+ overflow-y:auto;
+ background:rgba(255,255,255,0.1);
+ padding:15px;
+ border-radius:20px;
+ box-shadow:0 0 15px rgba(255,255,255,.2);
+}
+
+/* SURPRISE */
+#gift{
+ font-size:110px;
+ cursor:pointer;
+ animation:wobble 2s infinite;
+ display:none;
+}
+@keyframes wobble{
+ 0%{transform:rotate(-8deg);}
+ 50%{transform:rotate(8deg);}
+ 100%{transform:rotate(-8deg);}
+}
+
+#message{
+ font-size:40px;
+ color:#ffcc00;
+ display:none;
+ animation:pop 1.5s forwards;
+}
+@keyframes pop{
+ 0%{transform:scale(0);opacity:0;}
+ 100%{transform:scale(1);opacity:1;}
+}
+
+/* HEARTS + SPARKLES */
+.animated-hearts span{
+ position:fixed;
+ bottom:-50px;
+ font-size:25px;
+ animation:floatUp 6s linear infinite;
+ color:pink;
+}
+@keyframes floatUp{
+ 0%{transform:translateY(0) scale(1);opacity:1;}
+ 100%{transform:translateY(-900px) scale(2);opacity:0;}
+}
+
+.sparkle{
+ position:fixed;
+ width:6px;
+ height:6px;
+ background:white;
+ border-radius:50%;
+ animation:sparkle 3s linear infinite;
+}
+@keyframes sparkle{
+ 0%{opacity:0}
+ 50%{opacity:1}
+ 100%{opacity:0}
+}
+
+/* FIREWORKS CANVAS */
+.fireworks{
+ position:fixed;
+ inset:0;
+ z-index:-1;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_0b37ac9a2e.mp3?filename=romantic-piano-10968.mp3">
+</audio>
+
+<nav>
+ <a onclick="show('home')">Home</a>
+ <a onclick="show('memories')">Memories</a>
+ <a onclick="show('surprise')">Surprise</a>
+</nav>
+
+<canvas class="fireworks"></canvas>
+<div id="hearts" class="animated-hearts"></div>
+
+<!-- HOME -->
+<section id="home" class="active">
+<div class="container neon">
+
+<h1>🎆 Happy New Year My Love 🎆</h1>
+
+<div class="typing">I love you, Lugna ❤️</div>
+
+<div class="slideshow">
+  <img src="C:\Users\user\Downloads\WhatsApp Image 2025-12-30 at 9.32.40 PM.jpeg">
+</div>
+
+<p>
+From <b>Ariyan</b> to my sweet wife <b>Lugna</b> 💖  
+You are my happiness, my peace & my forever love.
+</p>
+
+<div class="letter">
+<p>
+My dearest love,
+Every moment spent with you is a blessing.  
+Thank you for filling my life with joy, laughter and love.
+This year, I promise to stand by you, care for you
+and love you more with every sunrise.
+Forever yours — Ariyan ❤️
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- MEMORIES -->
+<section id="memories">
+<div class="container neon">
+
+<h1>📸 Our Beautiful Memories</h1>
+
+<div class="gallery">
+<img src="C:\Users\user\Downloads\WhatsApp Image 2025-12-30 at 9.33.58 PM.jpeg">
+  <img src="C:\Users\user\Downloads\WhatsApp Image 2025-12-30 at 9.31.00 PM.jpeg">
+  <img src="C:\Users\user\Downloads\WhatsApp Image 2025-12-31 at 11.06.05 PM.jpeg">
+</div>
+
+<div id="lightbox"><img></div>
+
+</div>
+</section>
+
+<!-- SURPRISE -->
+<section id="surprise">
+<div class="container neon">
+
+<h1>🎁 Special Surprise For You</h1>
+
+<button onclick="showGift()">Open Surprise</button>
+
+<div id="gift">🎁</div>
+
+<div id="message">🎇 HAPPY NEW YEAR 2026 🎇</div>
+
+</div>
+</section>
+
+<script>
+/* PAGE SWITCH */
+function show(id){
+ document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+ document.getElementById(id).classList.add("active");
+}
+
+/* LIGHTBOX */
+document.querySelectorAll(".gallery img").forEach(img=>{
+ img.onclick=()=>{
+  document.querySelector("#lightbox img").src=img.src;
+  document.getElementById("lightbox").style.display="flex";
+ }
+});
+document.getElementById("lightbox").onclick=()=>document.getElementById("lightbox").style.display="none";
+
+/* SURPRISE */
+function showGift(){gift.style.display="block"}
+
+gift.onclick=function(){
+ gift.style.display="none";
+ message.style.display="block";
+ megaBurst();
+}
+
+/* CONFETTI / HEARTS / SPARKLES */
+function megaBurst(){
+ for(let i=0;i<60;i++){
+  let d=document.createElement("div");
+  d.innerHTML="💖";
+  d.style.position="fixed";
+  d.style.left=Math.random()*innerWidth+"px";
+  d.style.top=Math.random()*innerHeight+"px";
+  d.style.fontSize=Math.random()*30+15+"px";
+  document.body.appendChild(d);
+  setTimeout(()=>d.remove(),2000);
+ }
+}
+
+/* BACKGROUND HEARTS */
+setInterval(()=>{
+ let h=document.createElement("span");
+ h.innerHTML="💗";
+ h.style.left=Math.random()*innerWidth+"px";
+ hearts.appendChild(h);
+ setTimeout(()=>h.remove(),6000);
+},500);
+
+/* SPARKLES */
+setInterval(()=>{
+ let s=document.createElement("div");
+ s.className="sparkle";
+ s.style.left=Math.random()*innerWidth+"px";
+ s.style.top=Math.random()*innerHeight+"px";
+ document.body.appendChild(s);
+ setTimeout(()=>s.remove(),3000);
+},200);
+
+/* FIREWORKS (bigger & colourful) */
+const canvas=document.querySelector(".fireworks");
+const ctx=canvas.getContext("2d");
+canvas.width=innerWidth;
+canvas.height=innerHeight;
+
+function random(a,b){return Math.random()*(b-a)+a}
+let fw=[];
+
+function newFirework(){
+ fw.push({
+  x:random(0,canvas.width),
+  y:canvas.height,
+  targetY:random(60,canvas.height/2),
+  speed:random(4,8),
+  color:`hsl(${random(0,360)},100%,60%)`
+ });
+}
+
+function draw(){
+ ctx.fillStyle="rgba(0,0,0,0.2)";
+ ctx.fillRect(0,0,canvas.width,canvas.height);
+
+ fw.forEach((f,i)=>{
+  ctx.beginPath();
+  ctx.arc(f.x,f.y,4,0,Math.PI*2);
+  ctx.fillStyle=f.color;
+  ctx.fill();
+  f.y-=f.speed;
+  if(f.y<=f.targetY)fw.splice(i,1);
+ });
+
+ requestAnimationFrame(draw);
+}
+
+setInterval(newFirework,250);
+draw();
+</script>
+
+</body>
+</html>
